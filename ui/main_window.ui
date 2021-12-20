@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>151</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Normalizacja</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButtonLoad">
+      <property name="text">
+       <string>Wczytaj</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelMin">
+      <property name="text">
+       <string>Min:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxMin">
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="labelDecisionColumn">
+      <property name="text">
+       <string>Kolumna dec.:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QComboBox" name="comboBoxDecisionColumn"/>
+    </item>
+    <item row="1" column="4">
+     <widget class="QLabel" name="labelSeparator">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>Separator</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelMax">
+      <property name="text">
+       <string>Max:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxMax">
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLineEdit" name="lineEditSeparator">
+      <property name="text">
+       <string>spacja</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QPushButton" name="pushButtonNormalize">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Normalizuj</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" colspan="3">
+     <widget class="QLineEdit" name="lineEditLoad">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>396</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuClassification">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Klasyfikacja</string>
+    </property>
+    <addaction name="actionKnnTypeOne"/>
+    <addaction name="actionKnnTypeTwo"/>
+    <addaction name="actionKnn1vsOther"/>
+   </widget>
+   <widget class="QMenu" name="menuJson">
+    <property name="title">
+     <string>Json</string>
+    </property>
+    <addaction name="actionLoadJson"/>
+    <addaction name="actionSaveJson"/>
+    <addaction name="actionReset"/>
+   </widget>
+   <addaction name="menuClassification"/>
+   <addaction name="menuJson"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionKnnTypeOne">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Knn - typ pierwszy</string>
+   </property>
+  </action>
+  <action name="actionKnnTypeTwo">
+   <property name="text">
+    <string>Knn - typ drugi</string>
+   </property>
+  </action>
+  <action name="actionKnn1vsOther">
+   <property name="text">
+    <string>Knn - 1 vs reszta</string>
+   </property>
+  </action>
+  <action name="actionLoadJson">
+   <property name="text">
+    <string>Wczytaj</string>
+   </property>
+  </action>
+  <action name="actionSaveJson">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

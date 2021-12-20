@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogKnn1vsRest</class>
+ <widget class="QDialog" name="DialogKnn1vsRest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>815</width>
+    <height>75</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Knn - 1 vs reszta</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelSeparatorLearning">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Separator</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditSeparatorLearning">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>spacja</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButtonLoadLearning">
+     <property name="text">
+      <string>Wczytaj</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelMetrics">
+     <property name="text">
+      <string>Metryka:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBoxMetrics">
+     <item>
+      <property name="text">
+       <string>Euklidesa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manhattan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Canberra</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="labelK">
+     <property name="text">
+      <string>K:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" colspan="2">
+    <widget class="QSpinBox" name="spinBoxK">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999999</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QLabel" name="labelKnn">
+     <property name="text">
+      <string>Knn:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QComboBox" name="comboBoxKnn">
+     <item>
+      <property name="text">
+       <string>Pierwszy</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Drugi</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="QLabel" name="labelCoverage">
+     <property name="text">
+      <string>Pokrycie:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="8">
+    <widget class="QLineEdit" name="lineEditCoverage">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <widget class="QLabel" name="labelAccuracy">
+     <property name="text">
+      <string>Celność:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="10">
+    <widget class="QLineEdit" name="lineEditAccuracy">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="11">
+    <widget class="QPushButton" name="pushButtonClassify">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Klasyfikuj</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" colspan="8">
+    <widget class="QLineEdit" name="lineEditLearning">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
